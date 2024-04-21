@@ -1,13 +1,20 @@
 import { useState } from "react";
-
-
+import { useAuthContext } from "../context/AuthProvider";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+const {login} = useAuthContext()
   const handleSubmit = (e) =>{
     e.preventDefault()
-    console.log(email,password)
+    if(email === "muhammet@gmail.com" && password ==="123"){
+    login({email,password})
+    }
+    else{
+      alert("Wrong email or password!!!")
+      setEmail("")
+      setPassword("")
+  }
   }
   return (
     <div className="login-container">
@@ -29,6 +36,7 @@ const Login = () => {
           placeholder="Enter your E-mail"
           className="border focus:outline-primary p-2 mt-2 block w-[100%] rounded "
           onChange={e=>setEmail(e.target.value)}
+          value={email}
         />
         <label
           htmlFor="password"
@@ -42,6 +50,7 @@ const Login = () => {
           placeholder="Enter your Password"
           className="border focus:outline-yellow-400 p-2 mt-2 block w-[100%] rounded"
           onChange={e=>setPassword(e.target.value)}
+          value={password}
         />
         <input
           type="submit"
