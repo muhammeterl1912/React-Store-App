@@ -4,21 +4,20 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-const {login} = useAuthContext()
-  const handleSubmit = (e) =>{
-    e.preventDefault()
-    if(email === "muhammet@gmail.com" && password ==="123"){
-    login({email,password})
+  const { login } = useAuthContext();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (email === "muhammet@gmail.com" && password === "123") {
+      login({ email, password });
+    } else {
+      alert("Wrong email or password!!!");
+      setEmail("");
+      setPassword("");
     }
-    else{
-      alert("Wrong email or password!!!")
-      setEmail("")
-      setPassword("")
-  }
-  }
+  };
   return (
     <div className="login-container">
-      <form class="formContainer"  onSubmit={handleSubmit}>
+      <form class="formContainer" onSubmit={handleSubmit}>
         <h3 className="brand-title">Erol Store</h3>
         <h5 className="text-xl mb-3 text-center p-1">SIGN IN</h5>
         <p className=" mb-3 text-center p-1 text-black text-opacity-60">
@@ -35,7 +34,7 @@ const {login} = useAuthContext()
           id="e-mail"
           placeholder="Enter your E-mail"
           className="border focus:outline-primary p-2 mt-2 block w-[100%] rounded "
-          onChange={e=>setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
         <label
@@ -49,14 +48,13 @@ const {login} = useAuthContext()
           id="password"
           placeholder="Enter your Password"
           className="border focus:outline-yellow-400 p-2 mt-2 block w-[100%] rounded"
-          onChange={e=>setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
         <input
           type="submit"
           className="w-[100%] bg-primary text-secondary block m-auto mt-6 p-2 cursor-pointer hover:opacity-90"
           value={"SIGN IN"}
-         
         />
         <p className="text-black text-opacity-30 mt-2 ">
           Did you forget your Password?
