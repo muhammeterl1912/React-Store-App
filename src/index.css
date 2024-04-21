@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .login-container {
+    @apply h-[100vh] bg-primary flex justify-center items-center;
+  }
+.formContainer{
+  @apply bg-secondary rounded-[1rem] p-9 sm:p-10 sm:w-[70%] md:w-[30%];
+}
+.brand-title{
+  @apply text-3xl mb-3 text-center p-3 font-extrabold uppercase;
+}
+}
+
+
+
+
