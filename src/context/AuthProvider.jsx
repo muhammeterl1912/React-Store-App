@@ -9,7 +9,7 @@ const AuthProvider = ({ children }) => {
     setUser(param);
     navigate("/home");
   };
-console.log(user)
+
   return (
     <div>
       <AuthContext.Provider value={{ user, login }}>
