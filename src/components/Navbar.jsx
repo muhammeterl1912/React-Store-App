@@ -4,8 +4,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
-const Navbar = () => {
-  const [show, setShow] = useState(false);
+const Navbar = ({ setShowNav }) => {
+  const [show, setShow] = useState(true);
 
   return (
     <nav
@@ -54,12 +54,17 @@ const Navbar = () => {
         <li className="nav-text-hover">
           <NavLink to={"/about"}>About</NavLink>
         </li>
-        <div
+        <button
           className={`flex gap-1 items-center justify-end m-5 uppercase text-lg nav-text-hover`}
+          onClick={() => {
+  setShow(true);
+  setShowNav((i) => !i);
+}}
+
         >
           <NavLink to={"/"}>Logout</NavLink>
           <FiLogOut />
-        </div>
+        </button>
       </ul>
 
       <div className="w-[10%] mr-9 flex justify-between items-center md:hidden">

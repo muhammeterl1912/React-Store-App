@@ -1,30 +1,34 @@
-import { Route,Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Login from "../pages/Login";
-import Home from "../pages/Home"
+import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import Products from "../pages/Products";
 import About from "../pages/About";
 import Navbar from "../components/Navbar";
 import { useAuthContext } from "../context/AuthProvider";
+import PrivateRouter from "./PrivateRouter";
+import { useState } from "react";
 
 const AppRouter = () => {
-  const {user} = useAuthContext()
-  console.log(user)
+  const { user } = useAuthContext();
+  const [showNav, setShowNav] = useState(true);
 
   return (
-<div>
-{user.email === "muhammet@gmail.com" &&user.password==="123" && <Navbar/>}
-    <Routes>
-    
-      <Route path="/" element={<Login/>} />
-      <Route path="/home" element={<Home/>} />
-      <Route path="*" element={<NotFound/>} />
-      <Route path="/products" element={<Products/>} />
-      <Route path="/about" element={<About/>} />
-    </Routes>
-</div>
+    <div>
+     {showNav &&  <div>{user.email === "muhammet@gmail.com" && user.password === "123" && (
+        <Navbar setShowNav={setShowNav} />
+      )}</div>}
+      <Routes>
+        <Route path="/" element={<Login setShowNav={setShowNav}/>} />
+        <Route path="/" element={<PrivateRouter />}>
+          <Route path="/home" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+        </Route>
+      </Routes>
+    </div>
+  );
+};
 
-  )
-}
-
-export default AppRouter
+export default AppRouter;

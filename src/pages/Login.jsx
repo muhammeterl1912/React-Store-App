@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { useAuthContext } from "../context/AuthProvider";
-const Login = () => {
+const Login = ({setShowNav}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const { login } = useAuthContext();
   const handleSubmit = (e) => {
     e.preventDefault();
+   
     if (email === "muhammet@gmail.com" && password === "123") {
+
       login({ email, password });
+      setShowNav(i=>!i)
     } else {
       alert("Wrong email or password!!!");
       setEmail("");
