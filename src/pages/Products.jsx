@@ -1,9 +1,10 @@
-import React from 'react'
+import SearchInput from "../components/SearchInput";
+
 
 const Products = () => {
-  return (
-    <div>Products</div>
-  )
-}
+  return <div className="mt-5">
+  <SearchInput/>
+  </div>;
+};
 
-export default Products
+export default Products;

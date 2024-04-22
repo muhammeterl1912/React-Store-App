@@ -57,6 +57,7 @@ const Home = () => {
   <img src={logo1} alt="image 1" className="h-full w-full object-cover" />
         <img src={logo2} alt="image 2" className="h-full w-full object-cover" />
         <img src={logo3} alt="image 3" className="h-full w-full object-cover" />
+        
       </Carousel>
     </section>
   );
