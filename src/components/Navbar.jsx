@@ -57,10 +57,9 @@ const Navbar = ({ setShowNav }) => {
         <button
           className={`flex gap-1 items-center justify-end m-5 uppercase text-lg nav-text-hover`}
           onClick={() => {
-  setShow(true);
-  setShowNav((i) => !i);
-}}
-
+            setShow(true);
+            setShowNav(false);
+          }}
         >
           <NavLink to={"/"}>Logout</NavLink>
           <FiLogOut />

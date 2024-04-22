@@ -11,7 +11,7 @@ const Login = ({setShowNav}) => {
     if (email === "muhammet@gmail.com" && password === "123") {
 
       login({ email, password });
-      setShowNav(i=>!i)
+      setShowNav(true)
     } else {
       alert("Wrong email or password!!!");
       setEmail("");
@@ -28,7 +28,7 @@ const Login = ({setShowNav}) => {
         </p>
         <label
           htmlFor="e-mail"
-          className=" text-black text-opacity-40 cursor-pointer"
+          className=" text-black text-opacity-40 cursor-pointer email-hover"
         >
           Email:
         </label>
@@ -42,7 +42,7 @@ const Login = ({setShowNav}) => {
         />
         <label
           htmlFor="password"
-          className=" text-black text-opacity-40 cursor-pointer"
+          className=" text-black text-opacity-40 cursor-pointer password-hover"
         >
           Password:
         </label>

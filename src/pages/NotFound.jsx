@@ -1,8 +1,10 @@
 import notFound from "../components/assets/notFound.png";
 import { useNavigate } from "react-router-dom";
-const NotFound = () => {
+const NotFound = ({ showNav }) => {
   const navigate = useNavigate();
+  console.log(showNav)
   return (
+
     <div className="flex  mt-5 flex-col justify-center items-center gap-4">
       <h1 className="text-2xl uppercase text-primary">
         The page you are looking for does not exist!!!
@@ -20,7 +22,9 @@ const NotFound = () => {
         <button
           className="w-[10%] bg-primary text-secondary  mt-6 p-2  hover:opacity-90"
           onClick={() => {
-            navigate("/home");
+            {
+              showNav ? navigate("/")  :navigate(-1) ;
+            }
           }}
         >
           HOME

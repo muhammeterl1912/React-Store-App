@@ -15,7 +15,14 @@
 .nav-text-hover:hover, .active {
   @apply text-xl underline transition-all;
 }
-
+.email-hover:hover::after{
+content: "muhammed@gmail.com";
+color: red;
+}
+.password-hover:hover::after{
+  content: "123";
+  color: red;
+  }
 }
 
 

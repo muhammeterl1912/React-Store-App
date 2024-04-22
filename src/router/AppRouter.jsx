@@ -22,7 +22,7 @@ const AppRouter = () => {
         <Route path="/" element={<Login setShowNav={setShowNav}/>} />
         <Route path="/" element={<PrivateRouter />}>
           <Route path="/home" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound showNav={showNav} />} />
           <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />
         </Route>
