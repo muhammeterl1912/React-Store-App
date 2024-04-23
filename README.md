@@ -1,4 +1,3 @@
-
 # React Store App
 
 This project is a demonstration of various frontend technologies and features, including React Router for navigation, private routes for authentication, Axios for API requests, Material-UI for UI components, Tailwind CSS for styling, and conditional rendering for dynamic content display.
@@ -6,9 +5,7 @@ This project is a demonstration of various frontend technologies and features, i
 
 ## Demo
 
-Insert gif or link to demo
-
-👉 [Demo Link](https://incandescent-genie-878884.netlify.app/)## Technologies Used
+ Click here to see the demo.👉 [Demo Link](https://incandescent-genie-878884.netlify.app/)## Technologies Used
 
 ✔️ React Router: Used for client-side routing to navigate between different pages.
 ✔️ Private Router: Implements protected routes for authenticated users.
