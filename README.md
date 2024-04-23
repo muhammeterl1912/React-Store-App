@@ -8,7 +8,9 @@ This project is a demonstration of various frontend technologies and features, i
 
 Insert gif or link to demo
 
-👉 [Demo Link](https://incandescent-genie-878884.netlify.app/)## Technologies Used
+👉 [Demo Link](https://incandescent-genie-878884.netlify.app/)
+
+## Technologies Used
 
 ✔️ React Router: Used for client-side routing to navigate between different pages.
 ✔️ Private Router: Implements protected routes for authenticated users.
