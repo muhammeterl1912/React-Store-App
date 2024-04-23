@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>n</div>
+    <div>npppppp</div>
   )
 }
 

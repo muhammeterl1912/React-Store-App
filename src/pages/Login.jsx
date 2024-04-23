@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useAuthContext } from "../context/AuthProvider";
-const Login = ({setShowNav}) => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { login } = useAuthContext();
+  const { login,setShowNav } = useAuthContext();
   const handleSubmit = (e) => {
     e.preventDefault();
    

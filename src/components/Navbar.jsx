@@ -3,10 +3,10 @@ import { NavLink, Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-
-const Navbar = ({ setShowNav }) => {
+import { useAuthContext } from "../context/AuthProvider";
+const Navbar = () => {
   const [show, setShow] = useState(true);
-
+const { setShowNav } = useAuthContext()
   return (
     <nav
       className={`bg-primary h-20 flex justify-between ${
@@ -18,7 +18,7 @@ const Navbar = ({ setShowNav }) => {
           show && "items-start"
         }`}
       >
-        <Link to={"/home"}>Erol Store</Link>
+        <Link to={"/"}>Erol Store</Link>
       </h3>
 
       {!show && (
@@ -28,13 +28,13 @@ const Navbar = ({ setShowNav }) => {
           }`}
         >
           <li className="nav-text-hover">
-            <NavLink to={"/home"}>Home</NavLink>
+            <NavLink to={"home"}>Home</NavLink>
           </li>
           <li className="nav-text-hover">
-            <NavLink to={"/products"}>Products</NavLink>
+            <NavLink to={"/dashboard/products"}>Products</NavLink>
           </li>
           <li className="nav-text-hover">
-            <NavLink to={"/about"}>About</NavLink>
+            <NavLink to={"about"}>About</NavLink>
           </li>
           <div className="flex gap-1 items-center justify-end m-5 uppercase text-xs nav-text-hover">
             <NavLink to={"/"}>Logout</NavLink>
@@ -46,13 +46,13 @@ const Navbar = ({ setShowNav }) => {
         className={`lg:flex w-[40%] items-center uppercase p-5 justify-between hidden `}
       >
         <li className="nav-text-hover">
-          <NavLink to={"/home"}>Home</NavLink>
+          <NavLink to={"home"}>Home</NavLink>
         </li>
         <li className="nav-text-hover">
-          <NavLink to={"/products"}>Products</NavLink>
+          <NavLink to={"/dashboard/products"}>Products</NavLink>
         </li>
         <li className="nav-text-hover">
-          <NavLink to={"/about"}>About</NavLink>
+          <NavLink to={"about"}>About</NavLink>
         </li>
         <button
           className={`flex gap-1 items-center justify-end m-5 uppercase text-lg nav-text-hover`}

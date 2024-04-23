@@ -1,8 +1,9 @@
 import notFound from "../components/assets/notFound.png";
 import { useNavigate } from "react-router-dom";
-const NotFound = ({ showNav }) => {
+import { useAuthContext } from "../context/AuthProvider";
+const NotFound = () => {
   const navigate = useNavigate();
-  console.log(showNav)
+  const { showNav } = useAuthContext()
   return (
 
     <div className="flex  mt-5 flex-col justify-center items-center gap-4">
