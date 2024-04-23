@@ -16,7 +16,7 @@
   @apply text-xl underline transition-all;
 }
 .email-hover:hover::after{
-content: "muhammed@gmail.com";
+content: "muhammet@gmail.com";
 color: red;
 }
 .password-hover:hover::after{
