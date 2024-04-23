@@ -4,7 +4,7 @@ This project is a demonstration of various frontend technologies and features, i
 
 
 ## Demo
-
+HOVER OVER THE INPUT FIELD TO SEE THE EMAIL AND PASSWORD!!!
  Click here to see the demo.👉 [Demo Link](https://incandescent-genie-878884.netlify.app/)
  
  ## Technologies Used
