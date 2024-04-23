@@ -14,10 +14,7 @@ This project is a demonstration of various frontend technologies and features, i
 ✔️Tailwind CSS: Utilized for additional styling and layout customization.
 ✔️ Conditional Rendering: Implemented to dynamically render content based on certain conditions.
 
-
-
 ## Usage
-
 
 - Upon visiting the demo link, users are greeted with a homepage.
 - Navigation between different pages is facilitated by React Router.
