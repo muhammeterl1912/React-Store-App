@@ -6,7 +6,6 @@ import { useAuthContext } from "../context/AuthProvider";
 const PrivateRouter = () => {
   const { user, setShowNav, showNav } = useAuthContext();
 
-
   return showNav ? (
     <>
       {
@@ -19,8 +18,7 @@ const PrivateRouter = () => {
         </div>
       }
     </>
-  ) :
-   (
+  ) : (
     <Navigate
       to="/
     "

@@ -3,7 +3,6 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 
 const ProductContext = createContext();
 
-
 export const useProductsContext = () => {
   return useContext(ProductContext);
 };
@@ -11,7 +10,7 @@ export const useProductsContext = () => {
 const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("1");
   console.log(products);
   const getData = async () => {
     setLoading(true);
@@ -30,7 +29,7 @@ const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     getData();
-  }, [search]); 
+  }, [search]);
 
   const values = { products, loading, setSearch, search };
   return (
