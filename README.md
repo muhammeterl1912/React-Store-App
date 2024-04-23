@@ -12,10 +12,15 @@ HOVER OVER THE INPUT FIELD TO SEE THE EMAIL AND PASSWORD!!!
  ## Technologies Used
 
 ✔️ React Router: Used for client-side routing to navigate between different pages.
+
 ✔️ Private Router: Implements protected routes for authenticated users.
+
 ✔️ Axios: Handles API requests for fetching data from a backend server.
+
 ✔️ Material-UI: Provides pre-designed UI components for a modern and responsive design.
+
 ✔️Tailwind CSS: Utilized for additional styling and layout customization.
+
 ✔️ Conditional Rendering: Implemented to dynamically render content based on certain conditions.
 
 ## Usage
